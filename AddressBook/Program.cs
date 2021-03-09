@@ -6,10 +6,9 @@ namespace AddressBook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Address Book system");
-            AddressBook addressBook = new AddressBook();
-            addressBook.AddContact("yamini", "rishi", "Karnataka", "Banglore", "karnataka", "yamini@gmail.com", 599356, 9493499430);
-            addressBook.ViewContact();
+            Console.WriteLine("Welcome to Address Book Program");
+            new AddressBook().AddContact("yamini", "mahesh", "marthalli", "Banglore", "karnataka", "yamini.vundela@gmail.com", 9493499430);
+            new AddressBook().ViewContact();
         }
     }
 }
