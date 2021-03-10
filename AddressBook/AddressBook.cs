@@ -1,32 +1,41 @@
-﻿using System;
+﻿using AddNewContact;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace AddressBook
 {
-    class Contacts
+    class AddressBook : IContact
     {
-        public string FirstName;
-        public string LastName;
-        public string Address;
-        public string State;
-        public string City;
-        public int Zip;
-        public long PhoneNumber;
-        public Contacts(string firstName, string lastName, string address, string state, string city, int zipcode, string contactNumber)
+        private Dictionary<string, Contact> addressBook = new Dictionary<string, Contact>();
+        public void AddContact(string firstName, string lastName, string address, string city, string state, string email, int zip, long phoneNumber)
         {
-            this.FirstName = firstName;
-            this.LastName  = lastName;
-            this.Address  = address;
-            this.State  = state;
-            this.City = city;
-            this.Zip = zip;
-            long PhoneNumber = phoneNumber;
+            Contact contact = new Contact();
+            contact.FirstName = firstName;
+            contact.LastName = lastName;
+            contact.Address = address;
+            contact.City = city;
+            contact.State = state;
+            String Email = email;
+             int Zip = zip;
+            contact.PhoneNumber = phoneNumber;
+            addressBook.Add(contact.FirstName, contact);
         }
-        public string toString()
+        public void ViewContact()
         {
-            return "First Name:" + FirstName + "\nLast Name:" + LastName + "\nAddress:" + Address + "\nState:" + State + "\nCity:" + City + "\nZip:" + Zip + "\nPhoneNumber:" + PhoneNumber;
+            foreach (KeyValuePair<string, Contact> item in addressBook)
+            {
+                Console.WriteLine("First Name : " + item.Value.FirstName);
+                Console.WriteLine("Last Name : " + item.Value.LastName);
+                Console.WriteLine("Address : " + item.Value.Address);
+                Console.WriteLine("City : " + item.Value.City);
+                Console.WriteLine("State : " + item.Value.State);
+                Console.WriteLine("Email : " + item.Value.Email);
+                Console.WriteLine("Zip : " + item.Value.Zip);
+                Console.WriteLine("Phone Number : " + item.Value.PhoneNumber + "\n");
+
+            }
         }
     }
 }
-}
+
