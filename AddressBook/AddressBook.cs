@@ -17,7 +17,7 @@ namespace AddressBook
             contact.City = city;
             contact.State = state;
             String Email = email;
-             int Zip = zip;
+            int Zip = zip;
             contact.PhoneNumber = phoneNumber;
             addressBook.Add(contact.FirstName, contact);
         }
@@ -34,6 +34,52 @@ namespace AddressBook
                 Console.WriteLine("Zip : " + item.Value.Zip);
                 Console.WriteLine("Phone Number : " + item.Value.PhoneNumber + "\n");
 
+            }
+        }
+        public void EditContact(string name)
+        {
+            foreach (KeyValuePair<string, Contact> item in addressBook)
+            {
+                if (item.Key.Equals(name))
+                {
+                    Console.WriteLine("Choose What to Edit \nFirst Name \nLast Name \nAddress \nCity \nState \nEmail \nZip \nPhone Number");
+                    int choice = Convert.ToInt32(Console.ReadLine());
+                    switch (choice)
+                    {
+                        case FirstName:
+                            Console.WriteLine("Enter First Name :");
+                            item.Value.FirstName = Console.ReadLine();
+                            break;
+                        case Lastname:
+                            Console.WriteLine("Enter Last Name :");
+                            item.Value.LastName = Console.ReadLine();
+                            break;
+                        case Address:
+                            Console.WriteLine("Enter Address :");
+                            item.Value.Address = Console.ReadLine();
+                            break;
+                        case City:
+                            Console.WriteLine("Enter City :");
+                            item.Value.City = Console.ReadLine();
+                            break;
+                        case State:
+                            Console.WriteLine("Enter State :");
+                            item.Value.State = Console.ReadLine();
+                            break;
+                        case Email:
+                            Console.WriteLine("Enter Email :");
+                            item.Value.Email = Console.ReadLine();
+                            break;
+                        case Zip:
+                            Console.WriteLine("Enter Zip :");
+                            item.Value.Zip = Convert.ToInt32(Console.ReadLine());
+                            break;
+                        case PhoneNumber:
+                            Console.WriteLine("Enter Phone Number :");
+                            item.Value.PhoneNumber = Convert.ToInt64(Console.ReadLine());
+                            break;
+                    }
+                }
             }
         }
     }
