@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AddMultiplePerson
+namespace AddMultipleAddress
 {
     class AddressBook : IContact
     {
         private Dictionary<string, Contact> addressBook = new Dictionary<string, Contact>();
+        private object addressBookDictionary;
+
         public void AddContact(string firstName, string lastName, string address, string city, string state, string email, int zip, long phoneNumber)
         {
             Contact contact = new Contact();
-            contact.firstName = firstName;
+            contact.FirstName = firstName;
             contact.LastName = lastName;
             contact.Address = address;
             contact.City = city;
@@ -18,7 +20,7 @@ namespace AddMultiplePerson
             contact.Email = email;
             contact.Zip = zip;
             contact.PhoneNumber = phoneNumber;
-            addressBook.Add(contact.firstName, contact);
+            addressBook.Add(contact.FirstName, contact);
             Console.WriteLine("\nAdded Succesfully. \n");
         }
         public void ViewContact(string name)
@@ -27,7 +29,7 @@ namespace AddMultiplePerson
             {
                 if (item.Key.Equals(name))
                 {
-                    Console.WriteLine("First Name : " + item.Value.firstName);
+                    Console.WriteLine("First Name : " + item.Value.FirstName);
                     Console.WriteLine("Last Name : " + item.Value.LastName);
                     Console.WriteLine("Address : " + item.Value.Address);
                     Console.WriteLine("City : " + item.Value.City);
@@ -42,7 +44,7 @@ namespace AddMultiplePerson
         {
             foreach (KeyValuePair<string, Contact> item in addressBook)
             {
-                Console.WriteLine("First Name : " + item.Value.firstName);
+                Console.WriteLine("First Name : " + item.Value.FirstName);
                 Console.WriteLine("Last Name : " + item.Value.LastName);
                 Console.WriteLine("Address : " + item.Value.Address);
                 Console.WriteLine("City : " + item.Value.City);
@@ -112,7 +114,17 @@ namespace AddMultiplePerson
             {
                 Console.WriteLine("\nNot Found, Try Again.\n");
             }
+
+        }
+        public void AddAddressBook(string bookName)
+        {
+            AddressBook addressBook = new AddressBook();
+            addressBookDictionary.Add(bookName, addressBook);
+            Console.WriteLine("AddressBook Created.");
+        }
+        public Dictionary<string, AddressBook> GetAddressBook()
+        {
+            return addressBookDictionary;
         }
     }
-}
-
+}   

@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AddMultiplePerson
+namespace AddMultipleAddress
 {
     class Contact
     {
-        internal string firstName;
-
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
@@ -16,6 +14,5 @@ namespace AddMultiplePerson
         public string Email { get; set; }
         public int Zip { get; set; }
         public long PhoneNumber { get; set; }
-
     }
 }
