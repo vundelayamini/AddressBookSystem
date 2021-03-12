@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditExistingContact", "EditExistingContact\EditExistingContact.csproj", "{052CA091-841E-4FB4-89CC-FB412AE24D46}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddMultiplePerson", "AddMultiplePerson\AddMultiplePerson.csproj", "{68B4C55F-7F4D-4FD8-B867-8086BA20C6A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{052CA091-841E-4FB4-89CC-FB412AE24D46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{052CA091-841E-4FB4-89CC-FB412AE24D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{052CA091-841E-4FB4-89CC-FB412AE24D46}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{052CA091-841E-4FB4-89CC-FB412AE24D46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68B4C55F-7F4D-4FD8-B867-8086BA20C6A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B4C55F-7F4D-4FD8-B867-8086BA20C6A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B4C55F-7F4D-4FD8-B867-8086BA20C6A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B4C55F-7F4D-4FD8-B867-8086BA20C6A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {108778ED-1C81-48DB-AD0A-EF3616077BC5}
+		SolutionGuid = {683F63E1-233E-4EEC-8A16-73ECCB0EAAE7}
 	EndGlobalSection
 EndGlobal
