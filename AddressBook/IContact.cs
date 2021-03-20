@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AddMultipleAddress
+namespace AddressBook
 {
     interface IContact
     {
@@ -11,5 +11,6 @@ namespace AddMultipleAddress
         public void EditContact(string name, string bookName);
         public void DeleteContact(string name, string bookName);
         public void AddAddressBook(string bookName);
+        
     }
 }
